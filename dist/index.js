@@ -142,26 +142,26 @@ function (_React$Component) {
       var _this$props = this.props,
           profile = _this$props.profile,
           _this$props$prop = _this$props.prop,
-          prop = _this$props$prop === void 0 ? 'balance_sheet_av' : _this$props$prop,
+          prop = _this$props$prop === void 0 ? 'balance_sheet' : _this$props$prop,
           _this$props$imgProp = _this$props.imgProp,
           imgProp = _this$props$imgProp === void 0 ? 'cash_and_debt_img' : _this$props$imgProp; // eslint-disable-next-line
 
       var initialData = _lodash["default"].filter(_lodash["default"].get(profile, "".concat(prop, ".data"), []), function (d) {
         return d.ta;
-      }).slice(-12);
+      }).slice(-8);
 
       var copied = this.state.copied;
 
       if (!profile) {
         return _react["default"].createElement("div", {
           style: {
-            fontSize: 14
+            fontSize: 8
           }
         }, "Not available at this time... ");
       }
 
       if (profile[imgProp] && profile[imgProp].url) {
-        var btnClass = copied ? 'react-components-show-url btn btn-sm btn-danger disabled font-10' : 'react-components-show-url btn btn-sm btn-warning font-10';
+        var btnClass = copied ? 'react-components-show-url btn btn-sm btn-danger disabled font-8' : 'react-components-show-url btn btn-sm btn-warning font-8';
         var btnText = copied ? 'Copied' : 'Copy Img';
         return _react["default"].createElement("div", {
           className: "react-components-show-button"
@@ -202,21 +202,21 @@ function (_React$Component) {
       var options = {
         legend: {
           labels: {
-            fontSize: 12,
+            fontSize: 8,
             boxWidth: 3
           }
         },
         scales: {
           xAxes: [{
             ticks: {
-              fontSize: 12
+              fontSize: 8
             },
             stacked: true,
             barPercentage: 0.4
           }],
           yAxes: [{
             ticks: {
-              fontSize: 12,
+              fontSize: 8,
               min: 0,
               callback: function callback(label, index, labels) {
                 return Math.floor(label / divider);
@@ -242,7 +242,7 @@ function (_React$Component) {
         style: {
           width: '100%',
           padding: 5,
-          fontSize: 14
+          fontSize: 8
         }
       }, _react["default"].createElement("div", {
         style: {
@@ -254,7 +254,7 @@ function (_React$Component) {
       }, "Cash and Debt Analysis"), _react["default"].createElement("span", {
         className: "black",
         style: {
-          fontSize: 12,
+          fontSize: 8,
           marginLeft: 5
         }
       }, "(unit: ", unit, ")"))), _react["default"].createElement("div", {
@@ -267,7 +267,7 @@ function (_React$Component) {
         options: options
       })), _react["default"].createElement("div", {
         style: {
-          fontSize: 12,
+          fontSize: 8,
           color: 'gray',
           padding: 5
         }
