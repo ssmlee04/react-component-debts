@@ -83,7 +83,7 @@ var attributes = [{
   borderColor: '#5DADE2',
   attr1: 'ca',
   attr2: 'cc',
-  label: 'Current Asset Minus Cash and Cash Equivalent'
+  label: 'Current Asset minus Cash Equivalent'
 }, {
   backgroundColor: 'orange',
   borderColor: 'orange',
