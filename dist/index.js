@@ -155,13 +155,13 @@ function (_React$Component) {
       if (!profile) {
         return _react["default"].createElement("div", {
           style: {
-            fontSize: 8
+            fontSize: 12
           }
         }, "Not available at this time... ");
       }
 
       if (profile[imgProp] && profile[imgProp].url) {
-        var btnClass = copied ? 'react-components-show-url btn btn-sm btn-danger disabled font-8' : 'react-components-show-url btn btn-sm btn-warning font-8';
+        var btnClass = copied ? 'react-components-show-url btn btn-sm btn-danger disabled font-12' : 'react-components-show-url btn btn-sm btn-warning font-12';
         var btnText = copied ? 'Copied' : 'Copy Img';
         return _react["default"].createElement("div", {
           className: "react-components-show-button"
@@ -192,6 +192,7 @@ function (_React$Component) {
           return genDataSetAndAttributes(attr, initialData);
         })
       };
+      var currency = _lodash["default"].get(initialData, '0.currency') || 'USD';
 
       var _normalize = normalize(initialData.map(function (d) {
         return d.ta;
@@ -202,21 +203,21 @@ function (_React$Component) {
       var options = {
         legend: {
           labels: {
-            fontSize: 8,
+            fontSize: 12,
             boxWidth: 3
           }
         },
         scales: {
           xAxes: [{
             ticks: {
-              fontSize: 8
+              fontSize: 12
             },
             stacked: true,
             barPercentage: 0.4
           }],
           yAxes: [{
             ticks: {
-              fontSize: 8,
+              fontSize: 12,
               min: 0,
               callback: function callback(label, index, labels) {
                 return Math.floor(label / divider);
@@ -242,7 +243,7 @@ function (_React$Component) {
         style: {
           width: '100%',
           padding: 5,
-          fontSize: 8
+          fontSize: 12
         }
       }, _react["default"].createElement("div", {
         style: {
@@ -254,10 +255,10 @@ function (_React$Component) {
       }, "Cash and Debt Analysis"), _react["default"].createElement("span", {
         className: "black",
         style: {
-          fontSize: 8,
+          fontSize: 12,
           marginLeft: 5
         }
-      }, "(unit: ", unit, ")"))), _react["default"].createElement("div", {
+      }, "(unit: ", unit, " ", currency, ")"))), _react["default"].createElement("div", {
         style: {
           width: '100%'
         }
@@ -267,7 +268,7 @@ function (_React$Component) {
         options: options
       })), _react["default"].createElement("div", {
         style: {
-          fontSize: 8,
+          fontSize: 12,
           color: 'gray',
           padding: 5
         }
