@@ -124,15 +124,6 @@ function (_React$Component) {
   }
 
   _createClass(AnalystTrends, [{
-    key: "shouldComponentUpdate",
-    value: function shouldComponentUpdate(nextProps, nextState) {
-      var profile = this.props.profile;
-      if (!profile) return true;
-      if (nextState.copied) return true;
-      if (profile.ticker !== nextProps.profile.ticker) return true;
-      return false;
-    }
-  }, {
     key: "render",
     value: function render() {
       var _this2 = this;

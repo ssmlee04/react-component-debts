@@ -69,14 +69,6 @@ export class AnalystTrends extends React.Component {
     };
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    const { profile } = this.props;
-    if (!profile) return true;
-    if (nextState.copied) return true;
-    if (profile.ticker !== nextProps.profile.ticker) return true;
-    return false;
-  }
-
   render() {
     const { profile, prop = 'balance_sheet', imgProp = 'cash_and_debt_img', theme = 'light' } = this.props;
     // eslint-disable-next-line
